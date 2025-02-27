@@ -13,4 +13,7 @@ public interface ProductRepository extends MongoRepository<Product, Integer> {
 
     @Query("{'inventory.warehouses.locality': ?0}")
     List<Product> findByWarehouseLocality(String locality);
+
+    @Query("{'inventory.warehouses.type': ?0}")
+    List<Product> findByWarehouseType(String type);
 }
