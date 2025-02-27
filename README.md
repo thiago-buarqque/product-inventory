@@ -1,4 +1,4 @@
-# Recording incidents
+# Product Inventory
 
 ### About the project:
 
@@ -29,10 +29,10 @@ Technologies used:
 
 ### Installation
 
-1. Get the repository link [https://github.com/leilanyaragao/mobiauto-backend-202502]
+1. Get the repository link [https://github.com/leilanyaragao/product-inventory]
 2. Clone the repository
    ```https
-   git clone git@github.com:leilanyaragao/mobiauto-backend-202502.git
+   git clone git@github.com:leilanyaragao/product-inventory.git
    ```
 3. Open the project in your preferred IDE
 
