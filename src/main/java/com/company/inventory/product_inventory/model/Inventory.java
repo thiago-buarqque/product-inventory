@@ -17,14 +17,19 @@ public class Inventory {
 
     public Inventory(List<Warehouse> warehouses) {
         this.warehouses = warehouses;
-        getQuantity();
+        calculateQuantity();
+    }
+
+    void addWarehouse(Warehouse warehouse) {
+        this.warehouses.add(warehouse);
+        quantity();
     }
 
     public void quantity(){
-        this.quantity =  getQuantity();
+        this.quantity =  calculateQuantity();
     }
 
-    public int getQuantity() {
+    public int calculateQuantity() {
         int quantity = 0;
         for (Warehouse warehouse : warehouses) {
             quantity += warehouse.getQuantity();

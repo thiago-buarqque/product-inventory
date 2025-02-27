@@ -25,39 +25,12 @@ public class Product {
         updateMarketableStatus();
     }
 
+    public void addWarehouse(Warehouse warehouse) {
+        inventory.addWarehouse(warehouse);
+        updateMarketableStatus();
+    }
+
     public void updateMarketableStatus() {
-        this.isMarketable = inventory.getQuantity() > 0;
-    }
-
-    public Integer getSku() {
-        return sku;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Inventory getInventory() {
-        return inventory;
-    }
-
-    public boolean isMarketable() {
-        return isMarketable;
-    }
-
-    public void setSku(Integer sku) {
-        this.sku = sku;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setInventory(Inventory inventory) {
-        this.inventory = inventory;
-    }
-
-    public void setMarketable(boolean marketable) {
-        isMarketable = marketable;
+        this.isMarketable = inventory.calculateQuantity() > 0;
     }
 }
