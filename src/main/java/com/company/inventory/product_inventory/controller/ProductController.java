@@ -4,6 +4,8 @@ import com.company.inventory.product_inventory.dto.ProductResponseDTO;
 import com.company.inventory.product_inventory.model.Product;
 import com.company.inventory.product_inventory.model.Warehouse;
 import com.company.inventory.product_inventory.service.ProductService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +18,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 @Validated
+@Tag(name = "Example", description = "Example API operations")
 public class ProductController {
 
     private final ProductService productService;
 
+    @Operation(summary = "Create Product", description = "bla bla bla")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Product createProduct(@RequestBody Product product) {
